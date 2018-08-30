@@ -1,0 +1,8 @@
+
+<input type="text" [(ngModel)]="newUser" />
+<button (click)="addUser(newUser)">Create</button>
+<ul>
+  <li *ngFor="let user of (userList | async)">
+    <app-user [data]="user"></app-user>
+  </li>
+</ul>
